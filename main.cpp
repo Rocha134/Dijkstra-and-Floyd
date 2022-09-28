@@ -118,6 +118,7 @@ vector<int> dijkstraDist(
 int main()
 {
     vector<Node*> v;
+    //Source graph
     int s = 0;
 
     int n;
@@ -149,25 +150,37 @@ int main()
         }
         cout << "\n";
     }
+    //Graph creation is done
 
-    vector<int> path(v.size());
-    vector<int> dist
-            = dijkstraDist(v, s, path);
+    //We need to iterate n times to calculate distance for every node to each node
 
-    // Loop to print the distance of
-    // every node from source vertex
-    for (int i = 0; i < dist.size(); i++) {
-        if (dist[i] == infi) {
-            cout << i << " and " << s
-                 << " are not connected"
-                 << endl;
-            continue;
+    do {
+        // code block to be executed
+        vector<int> path(v.size());
+        vector<int> dist
+                = dijkstraDist(v, s, path);
+
+        // Loop to print the distance of
+        // every node from source vertex
+        for (int i = 0; i < dist.size(); i++) {
+            if (dist[i] == infi) {
+                cout <<"node "<< s
+                << " to node "
+                << i << " : "
+                << -1 << endl;
+                continue;
+            }
+            cout << "node " << s
+                 << " to node "
+                 << i << " : "
+                 << dist[i] << endl;
         }
-        cout << "node " << s
-             << " to node "
-             << i << " : "
-             << dist[i] << endl;
+
+        s++;
     }
+    while (s < n);
+
+
 
     return 0;
 }
