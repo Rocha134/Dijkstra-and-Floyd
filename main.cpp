@@ -224,6 +224,23 @@ int main()
         }
     }
 
+    cout << endl;
+
+    //Print the solution of Floyd´s algorithm
+    cout << "The following matrix shows the shortest "
+            "distances"
+            " between every pair of vertices \n";
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (dist[i][j] == infi)
+                cout << "-1"
+                     << "     ";
+            else
+                cout << dist[i][j] << "     ";
+        }
+        cout << endl;
+    }
+
 
     return 0;
 }
