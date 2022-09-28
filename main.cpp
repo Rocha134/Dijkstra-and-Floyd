@@ -120,6 +120,7 @@ int main()
     //Source graph
     int s = 0;
 
+    cout<<"Enter number of vertex: ";
     int n;
     cin >> n;
     int arr[n][n], i, j,k;
@@ -130,11 +131,13 @@ int main()
         v.push_back(a);
     }
 
-    cout << "\n Enter " << n << "*" << n << " Array Elements : \n";
+    cout << "\n Enter " << n << "*" << n << " Adjacency List Elements : \n";
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
-            cout << " ";
             cin >> arr[i][j];
+            if (arr[i][j] == -1){
+                arr[i][j] = 1000000000;
+            }
         }
     }
 
