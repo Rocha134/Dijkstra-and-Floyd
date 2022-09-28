@@ -113,11 +113,31 @@ vector<int> dijkstraDist(
     return dist;
 }
 
+
 // Driver Code
 int main()
 {
+
+    int n;
+    cin >> n;
+    int arr[n][n], i, j;
+    cout << "\n Enter " << n << "*" << n << " Array Elements : \n";
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            cout << " ";
+            cin >> arr[i][j];
+        }
+    }
+    cout << "\n Two Dimensional Array is : \n";
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            cout << " " << arr[i][j] << " ";
+        }
+        cout << "\n";
+    }
+
     vector<Node*> v;
-    int n = 4, s = 0, e = 5;
+    int s = 0;
 
     // Loop to create the nodes
     for (int i = 0; i < n; i++) {
