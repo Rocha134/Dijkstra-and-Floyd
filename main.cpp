@@ -1,6 +1,14 @@
 //Francisco Rocha
 //Iker Guerrero
 //Juan Carlos Llanos
+
+//Complexity
+
+/*The Floyd-Warshall all-pairs shortest path runs in O(n3) time, which is asymptotically
+ * no better than n calls to Dijkstra’s algorithm. However, the loops are so tight and
+ * the program so short that it runs better in practice. It is notable as one of the rare
+ * graph algorithms that work better on adjacency matrices than adjacency lists.*/
+
 #include "stdc++.h"
 
 // C++ implementation to find the
