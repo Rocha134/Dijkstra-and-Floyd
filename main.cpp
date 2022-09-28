@@ -117,6 +117,8 @@ vector<int> dijkstraDist(
 // Driver Code
 int main()
 {
+    vector<Node*> v;
+    int s = 0;
 
     int n;
     cin >> n;
@@ -135,9 +137,6 @@ int main()
         }
         cout << "\n";
     }
-
-    vector<Node*> v;
-    int s = 0;
 
     // Loop to create the nodes
     for (int i = 0; i < n; i++) {
